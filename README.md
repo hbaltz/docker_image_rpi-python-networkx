@@ -20,8 +20,8 @@ Raspbian + python 3.5 + networkx with some modifications :
 
 If you want to launch a script :
 * Create a data folder on your computer : `sudo mkdir <path-to-data-dir>`
-* Place your python scripts in <path-to-data-dir>
-* Link the volume <path-to-data-dir> to  /data in the container
+* Place your python scripts in `<path-to-data-dir>`
+* Link the volume `<path-to-data-dir>` to  /data in the container
 * Launch `docker run -v <path-to-data-dir>:/data hbaltz/rpi-python-networkx:latest python <script-name>.py`
 
 ### Compile the image yourself
