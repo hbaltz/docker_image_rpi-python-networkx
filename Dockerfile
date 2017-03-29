@@ -14,7 +14,7 @@ RUN apt-get purge -y python.*
 # > At the moment, setting "LANG=C" on a Linux system *fundamentally breaks Python 3*, and that's not OK.
 ENV LANG C.UTF-8
 
-# install python and networkx dependencies 
+# Install python and networkx dependencies 
 RUN apt-get update && apt-get install -y --no-install-recommends \
 		libc6-dev \
 		libncurses5-dev libncursesw5-dev libreadline6-dev \
@@ -32,7 +32,7 @@ RUN cd $HOME &&  wget https://www.python.org/ftp/python/3.5.2/Python-3.5.2.tgz &
 	./configure && make -j4  && make install && \
 	cd .. && rm -fr ./Python-3.5.2*
 
-# upgrade:
+# Upgrade
 RUN pip3 install -U pip && \
 	pip3 install -U setuptools
 
